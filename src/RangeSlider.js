@@ -3,7 +3,7 @@ import numeral from 'numeral';
 
 
 if(typeof window !== 'undefined') {
-    require('./rangeslider/rangeslider.css');
+    require('./rangeslider.css');
 }
 
 class RangeSlider extends React.Component {
