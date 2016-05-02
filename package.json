@@ -11,7 +11,7 @@
   "dependencies": {
     "numeral": "^1.5.3"
   },
-  scripts: {
+  "scripts": {
     {"postinstall": "grunt"}
   },
   "devDependencies": {
