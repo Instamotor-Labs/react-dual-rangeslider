@@ -1,0 +1,11 @@
+{
+  "name": "react-dual-rangeslider",
+  "version": "1.0.0",
+  "description": "Semantic dual range slider component for Reactjs",
+  "main": "RangeSlider.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dan Newcome",
+  "license": "ISC"
+}
