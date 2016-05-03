@@ -21,6 +21,20 @@ module.exports = function(grunt) {
                 }
             }
         },
+        webpack: {
+            build: {
+                entry: "./entry.js",
+                output: {
+                    path: __dirname,
+                    filename: "bundle.js"
+                },
+                module: {
+                    loaders: [
+                        { test: /\.css$/, loader: "style-loader!css-loader" }
+                    ]
+                }
+            }
+        },
         copy: { dev: { files: [{ expand: true, cwd: 'src/',
                     src: 'rangeslider.css',
                     dest: 'dist/'
@@ -31,6 +45,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-atomizer');
+    grunt.loadNpmTasks('grunt-webpack');
+
     grunt.registerTask('default', ['babel', 'copy']);
 };
 
