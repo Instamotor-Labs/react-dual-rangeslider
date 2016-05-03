@@ -1,5 +1,16 @@
 module.exports = function(grunt) {
     grunt.initConfig({
+        atomizer: {
+            dev: {
+                options: {
+                    configFile: './configs/atomizer.js'
+                },
+                files: [{
+                    src: ['./src/**/*.js'],
+                    dest: './dist/atomic.css'
+                }]
+            }
+        },
         babel: {
             options: {
                 sourceMap: true
@@ -19,6 +30,7 @@ module.exports = function(grunt) {
     });
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-atomizer');
     grunt.registerTask('default', ['babel', 'copy']);
 };
 

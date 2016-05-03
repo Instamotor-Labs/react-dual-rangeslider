@@ -4,6 +4,7 @@ import numeral from 'numeral';
 
 if(typeof window !== 'undefined') {
     require('./rangeslider.css');
+    require('./atomic.css');
 }
 
 class RangeSlider extends React.Component {
