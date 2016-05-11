@@ -40,7 +40,7 @@ var RangeSlider = function (_React$Component) {
             max: props.max,
             minElement: null,
             maxElement: null,
-            minRange: 500
+            minRange: props.minRange || 500
         };
         return _this;
     }
