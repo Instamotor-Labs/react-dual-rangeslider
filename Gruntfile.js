@@ -17,13 +17,14 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
-                    'dist/RangeSlider.js': 'src/RangeSlider.js'
+                    'dist/RangeSlider.js': 'src/RangeSlider.js',
+                    'dist/entry.js': './entry.js'
                 }
             }
         },
         webpack: {
             build: {
-                entry: "./entry.js",
+                entry: "./dist/entry.js",
                 output: {
                     path: __dirname,
                     filename: "bundle.js"
@@ -47,6 +48,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-atomizer');
     grunt.loadNpmTasks('grunt-webpack');
 
-    grunt.registerTask('default', ['babel', 'copy']);
+    grunt.registerTask('default', ['babel', 'webpack', 'copy']);
 };
 

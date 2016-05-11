@@ -1,1 +1,4 @@
 node_modules
+bundle.js
+dist/entry.js
+dist/entry.js.map

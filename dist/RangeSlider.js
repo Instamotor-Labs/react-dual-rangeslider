@@ -24,6 +24,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 if (typeof window !== 'undefined') {
     require('./rangeslider.css');
+    require('./atomic.css');
 }
 
 var RangeSlider = function (_React$Component) {
