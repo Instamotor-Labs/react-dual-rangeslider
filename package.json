@@ -1,6 +1,6 @@
 {
   "name": "react-dual-rangeslider",
-  "version": "1.2.6",
+  "version": "1.2.8",
   "description": "Semantic dual range slider component for Reactjs",
   "main": "dist/RangeSlider.js",
   "scripts": {

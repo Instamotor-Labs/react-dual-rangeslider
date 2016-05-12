@@ -56,7 +56,7 @@ var RangeSlider = function (_React$Component) {
         value: function render() {
             var _this2 = this;
 
-            return _react2.default.createElement(
+            var ret = _react2.default.createElement(
                 'div',
                 { className: 'W(100%)' },
                 _react2.default.createElement(
@@ -136,6 +136,8 @@ var RangeSlider = function (_React$Component) {
                     )
                 )
             );
+            console.log('************ RangeSlider render() ', ret);
+            return ret;
         }
     }]);
 

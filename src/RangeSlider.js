@@ -23,7 +23,7 @@ class RangeSlider extends React.Component {
         this.state.maxElement.value = this.state.max;
     }
     render() {
-        return (
+        var ret = (
             <div className="W(100%)">
                 <div className="D(ib) C(#4e5b65)">
                     {numeral(this.state.min).format('$0,0')}
@@ -108,6 +108,8 @@ class RangeSlider extends React.Component {
                 </div>
             </div>
         );
+        console.log('************ RangeSlider render() ', ret);
+        return ret;
     }
 }
 
