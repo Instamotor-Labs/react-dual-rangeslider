@@ -116,7 +116,24 @@ var RangeSlider = function (_React$Component) {
                         max: this.props.max,
                         step: this.props.step,
                         type: 'range'
-                    })
+                    }),
+                    _react2.default.createElement(
+                        'div',
+                        { style: {
+                                position: 'absolute',
+                                boxSizing: 'border-box',
+                                width: '100%',
+                                paddingLeft: '8px',
+                                paddingRight: '8px',
+                                top: '7px'
+                            } },
+                        _react2.default.createElement('div', { style: {
+                                marginLeft: (this.state.min - this.props.min) / (this.props.max - this.props.min) * 100 + '%',
+                                width: 100 - (this.state.min - this.props.min + this.props.max - this.state.max) / (this.props.max - this.props.min) * 100 + '%',
+                                height: '4px',
+                                backgroundColor: '#5FCCC7'
+                            } })
+                    )
                 )
             );
         }

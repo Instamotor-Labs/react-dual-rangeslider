@@ -90,6 +90,21 @@ class RangeSlider extends React.Component {
                         step={this.props.step}
                         type="range"
                     />
+                    <div style={{
+                            position: 'absolute',
+                            boxSizing: 'border-box',
+                            width: '100%',
+                            paddingLeft: '8px',
+                            paddingRight: '8px',
+                            top: '7px'
+                        }}>
+                        <div style={{
+                            marginLeft: (this.state.min - this.props.min)/(this.props.max - this.props.min)*100 + '%',
+                            width: (100-(this.state.min - this.props.min + this.props.max - this.state.max)/(this.props.max - this.props.min)*100) + '%', 
+                            height: '4px',
+                            backgroundColor: '#5FCCC7'
+                        }}></div>
+                    </div>
                 </div>
             </div>
         );
