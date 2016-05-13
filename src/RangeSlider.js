@@ -23,7 +23,7 @@ class RangeSlider extends React.Component {
         this.state.maxElement.value = this.prop.maxValue || this.props.max;
     }
 /*
-    componentWillUpdate() {
+    componentWillReceiveProps() {
         this.state.minElement.value = this.props.minValue || this.props.min;
         this.state.maxElement.value = this.prop.maxValue || this.props.max;
     }
@@ -114,7 +114,6 @@ class RangeSlider extends React.Component {
                 </div>
             </div>
         );
-        console.log('************ RangeSlider render() ', ret);
         return ret;
     }
 }

@@ -52,7 +52,7 @@ var RangeSlider = function (_React$Component) {
             this.state.maxElement.value = this.prop.maxValue || this.props.max;
         }
         /*
-            componentWillUpdate() {
+            componentWillReceiveProps() {
                 this.state.minElement.value = this.props.minValue || this.props.min;
                 this.state.maxElement.value = this.prop.maxValue || this.props.max;
             }
@@ -143,7 +143,6 @@ var RangeSlider = function (_React$Component) {
                     )
                 )
             );
-            console.log('************ RangeSlider render() ', ret);
             return ret;
         }
     }]);
