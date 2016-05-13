@@ -22,10 +22,12 @@ class RangeSlider extends React.Component {
         this.state.minElement.value = this.props.minValue || this.props.min;
         this.state.maxElement.value = this.prop.maxValue || this.props.max;
     }
+/*
     componentWillUpdate() {
         this.state.minElement.value = this.props.minValue || this.props.min;
         this.state.maxElement.value = this.prop.maxValue || this.props.max;
     }
+*/
     render() {
         var ret = (
             <div className="W(100%)">
