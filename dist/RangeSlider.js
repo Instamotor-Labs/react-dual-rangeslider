@@ -52,6 +52,12 @@ var RangeSlider = function (_React$Component) {
             this.state.maxElement.value = this.prop.maxValue || this.props.max;
         }
     }, {
+        key: 'componentWillUpdate',
+        value: function componentWillUpdate() {
+            this.state.minElement.value = this.props.minValue || this.props.min;
+            this.state.maxElement.value = this.prop.maxValue || this.props.max;
+        }
+    }, {
         key: 'render',
         value: function render() {
             var _this2 = this;
