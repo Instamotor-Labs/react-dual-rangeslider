@@ -48,8 +48,8 @@ var RangeSlider = function (_React$Component) {
     _createClass(RangeSlider, [{
         key: 'componentDidMount',
         value: function componentDidMount() {
-            this.state.minElement.value = this.state.min;
-            this.state.maxElement.value = this.state.max;
+            this.state.minElement.value = this.props.minValue || this.props.min;
+            this.state.maxElement.value = this.prop.maxValue || this.props.max;
         }
     }, {
         key: 'render',
@@ -94,7 +94,6 @@ var RangeSlider = function (_React$Component) {
                         min: this.props.min,
                         max: this.props.max,
                         step: this.props.step,
-                        value: this.props.minValue,
                         type: 'range'
                     }),
                     _react2.default.createElement('input', {
@@ -116,7 +115,6 @@ var RangeSlider = function (_React$Component) {
                         min: this.props.min,
                         max: this.props.max,
                         step: this.props.step,
-                        value: this.props.maxValue,
                         type: 'range'
                     }),
                     _react2.default.createElement(
