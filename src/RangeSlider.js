@@ -60,6 +60,7 @@ class RangeSlider extends React.Component {
                         min={this.props.min}
                         max={this.props.max}
                         step={this.props.step}
+                        value={this.props.minValue}
                         type="range"
                     />
                     <input
@@ -88,6 +89,7 @@ class RangeSlider extends React.Component {
                         min={this.props.min}
                         max={this.props.max}
                         step={this.props.step}
+                        value={this.props.maxValue}
                         type="range"
                     />
                     <div style={{
