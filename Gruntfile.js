@@ -18,7 +18,8 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'dist/RangeSlider.js': 'src/RangeSlider.js',
-                    'dist/entry.js': './entry.js'
+                    'dist/entry.js': './entry.js',
+                    '__tests__/RangeSlider.js': 'tests/RangeSlider.js'
                 }
             }
         },
