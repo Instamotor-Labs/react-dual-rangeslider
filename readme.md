@@ -1,4 +1,6 @@
-# react-dual-rangeslider - Semantic HTML5 range slider React component with upper and lower bound inputs.
+# react-dual-rangeslider 
+
+## Semantic HTML5 range slider React component with upper and lower bound inputs.
 
 react-dual-rangeslider is an input component that allows a user to specify an upper and a lower bound for a given range.
 Extra attention is given to HTML5 semantics for accessibility. Unlike many other range components, react-dual-rangeslider uses
@@ -7,7 +9,7 @@ with form submission if scripts are disabled and also in fallback scenarios when
 
 ![Demo video](/assets/demo.gif?raw=true)
 
-# Building 
+## Building 
 
 ```
 $ git clone
@@ -19,7 +21,7 @@ $ git add dist
 react-dual-rangeslider is currently deployed directly from github, so dist files must be checked in. This requirement
 will be dropped once the module is on npm.
 
-# Usage
+## Usage
 
 ```
 import RangeSlider from 'react-dual-rangeslider';
@@ -37,9 +39,9 @@ import RangeSlider from 'react-dual-rangeslider';
     />
 ```
 
-# API
+## API
 
-## props
+### props
 
 ```
 min - range lower bound 
@@ -53,24 +55,24 @@ className - class names are merged to container element
 style - supplied styles are applied to container element
 ```
 
-## callback data
+### callback data
 
 ```
 {min: max:}
 ```
 
-# Demo
+## Demo
 
 browse to test.html after building
 
-# running tests
+## running tests
 
 ```
 $ npm test
 ```
 
-# Issues
+## Issues
 
 See gihub issue list for outstanding bugs and pending features
 
-# License
+## License
