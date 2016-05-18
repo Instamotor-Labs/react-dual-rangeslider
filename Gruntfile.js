@@ -32,7 +32,8 @@ module.exports = function(grunt) {
                 },
                 module: {
                     loaders: [
-                        { test: /\.css$/, loader: "style-loader!css-loader" }
+                        { test: /\.css$/, loader: "style-loader!css-loader" },
+                        { test: /\.svg$/, loader: "url-loader?limit=1000" }
                     ]
                 }
             },
@@ -44,17 +45,16 @@ module.exports = function(grunt) {
                 },
                 module: {
                     loaders: [
-                        { test: /\.css$/, loader: "style-loader!css-loader" }
+                        { test: /\.css$/, loader: "style-loader!css-loader" },
+                        { test: /\.svg$/, loader: "url-loader?limit=1000" }
                     ]
                 }
             }
         },
-        copy: { dev: { files: [{ expand: true, cwd: 'src/',
-                    src: 'rangeslider.css',
-                    dest: 'dist/'
-                }]
-            }
-        }
+        copy: { dev: { files: [
+            { expand: true, cwd: 'src/', src: 'rangeslider.css', dest: 'dist/' },
+            { expand: true, cwd: 'assets/', src: 'thumb.svg', dest: 'dist/' }
+        ]}}
     });
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-copy');
