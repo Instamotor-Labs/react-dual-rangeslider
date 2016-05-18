@@ -4,7 +4,8 @@
   "description": "Semantic dual range slider component for Reactjs",
   "main": "dist/RangeSlider.js",
   "scripts": {
-    "test": "jest"
+    "jest": "jest",
+    "test": "grunt babel && grunt webpack && npm run-script jest"
   },
   "jest": {
     "verbose": true,
@@ -33,6 +34,7 @@
     "react-addons-test-utils": "^15.0.2",
     "react-dom": "^15.0.2",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.0"
+    "webpack": "^1.13.0",
+    "webpack-dev-server": "^1.14.1"
   }
 }

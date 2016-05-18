@@ -35,6 +35,18 @@ module.exports = function(grunt) {
                         { test: /\.css$/, loader: "style-loader!css-loader" }
                     ]
                 }
+            },
+            test: {
+                entry: "./dist/RangeSlider.js",
+                output: {
+                    path: __dirname,
+                    filename: "bundle-test.js"
+                },
+                module: {
+                    loaders: [
+                        { test: /\.css$/, loader: "style-loader!css-loader" }
+                    ]
+                }
             }
         },
         copy: { dev: { files: [{ expand: true, cwd: 'src/',
