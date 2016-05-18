@@ -70,7 +70,7 @@ var RangeSlider = function (_React$Component) {
 
             var ret = _react2.default.createElement(
                 'div',
-                { className: 'W(100%)' },
+                { style: this.props.style, className: this.props.className + ' W(100%)' },
                 _react2.default.createElement(
                     'div',
                     { className: 'D(ib) C(#4e5b65)' },

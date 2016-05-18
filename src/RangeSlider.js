@@ -34,7 +34,7 @@ class RangeSlider extends React.Component {
     }
     render() {
         var ret = (
-            <div className="W(100%)">
+            <div style={this.props.style} className={this.props.className + ' W(100%)'}>
                 <div className="D(ib) C(#4e5b65)">
                     {numeral(this.state.min).format('$0,0')}
                 </div>
