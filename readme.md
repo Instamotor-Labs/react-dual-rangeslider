@@ -5,7 +5,7 @@ Extra attention is given to HTML5 semantics for accessibility. Unlike many other
 two HTML5 `input` elements styled to give the illusion of a true dual input control. This has benefits including working
 with form submission if scripts are disabled and also in fallback scenarios when styles are disabled or not available.
 
-![Demo video](/assets/demo.gif)
+![Demo video](/assets/demo.gif?raw=true)
 
 # Building 
 
