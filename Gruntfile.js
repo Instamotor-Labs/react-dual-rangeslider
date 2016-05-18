@@ -18,7 +18,8 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     'dist/RangeSlider.js': 'src/RangeSlider.js',
-                    'dist/entry.js': './entry.js'
+                    'dist/entry.js': './entry.js',
+                    '__tests__/RangeSlider.js': 'tests/RangeSlider.js'
                 }
             }
         },
@@ -28,6 +29,18 @@ module.exports = function(grunt) {
                 output: {
                     path: __dirname,
                     filename: "bundle.js"
+                },
+                module: {
+                    loaders: [
+                        { test: /\.css$/, loader: "style-loader!css-loader" }
+                    ]
+                }
+            },
+            test: {
+                entry: "./dist/RangeSlider.js",
+                output: {
+                    path: __dirname,
+                    filename: "bundle-test.js"
                 },
                 module: {
                     loaders: [
