@@ -61,6 +61,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-atomizer');
     grunt.loadNpmTasks('grunt-webpack');
 
-    grunt.registerTask('default', ['copy', 'babel', 'webpack']);
+    grunt.registerTask('default', ['atomizer', 'copy', 'babel', 'webpack']);
 };
 
