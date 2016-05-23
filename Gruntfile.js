@@ -1,3 +1,4 @@
+var StringReplacePlugin = require('string-replace-webpack-plugin');
 module.exports = function(grunt) {
     grunt.initConfig({
         atomizer: {
@@ -33,9 +34,25 @@ module.exports = function(grunt) {
                 module: {
                     loaders: [
                         { test: /\.css$/, loader: "style-loader!css-loader" },
-                        { test: /\.svg$/, loader: "url-loader?limit=1000" }
+                        { test: /\.svg$/, loader: "url-loader?limit=2000&name=dist/[hash].[ext]" },
+                        { 
+                            test: /rangeslider.css$/,
+                            loader: StringReplacePlugin.replace({
+                                replacements: [
+                                    {
+                                        pattern: /thumb.svg/ig,
+                                        replacement: function (match, p1, offset, string) {
+                                            return 'thumb.svg';
+                                        }
+                                    }
+                                ]
+                            })
+                        }
                     ]
-                }
+                },
+                plugins: [
+                    new StringReplacePlugin()
+                ]
             },
             test: {
                 entry: "./dist/RangeSlider.js",
@@ -46,9 +63,25 @@ module.exports = function(grunt) {
                 module: {
                     loaders: [
                         { test: /\.css$/, loader: "style-loader!css-loader" },
-                        { test: /\.svg$/, loader: "url-loader?limit=1000" }
+                        { test: /\.svg$/, loader: "url-loader?limit=2000&name=dist/[hash].[ext]" },
+                        { 
+                            test: /rangeslider.css$/,
+                            loader: StringReplacePlugin.replace({
+                                replacements: [
+                                    {
+                                        pattern: /thumb.svg/ig,
+                                        replacement: function (match, p1, offset, string) {
+                                            return 'thumb.svg';
+                                        }
+                                    }
+                                ]
+                            })
+                        }
                     ]
-                }
+                },
+                plugins: [
+                    new StringReplacePlugin()
+                ]
             }
         },
         copy: { dev: { files: [
