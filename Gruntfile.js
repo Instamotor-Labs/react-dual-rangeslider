@@ -40,7 +40,7 @@ module.exports = function(grunt) {
                             loader: StringReplacePlugin.replace({
                                 replacements: [
                                     {
-                                        pattern: /thumb.svg/ig,
+                                        pattern: /\/thumb.svg/ig,
                                         replacement: function (match, p1, offset, string) {
                                             return 'thumb.svg';
                                         }
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
                             loader: StringReplacePlugin.replace({
                                 replacements: [
                                     {
-                                        pattern: /thumb.svg/ig,
+                                        pattern: /\/thumb.svg/ig,
                                         replacement: function (match, p1, offset, string) {
                                             return 'thumb.svg';
                                         }
